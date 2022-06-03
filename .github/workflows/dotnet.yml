@@ -3,11 +3,11 @@ name: .NET
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+          - 'terraform/**'
+          - '.github/workflows/**'
   pull_request:
     branches: [ master ]
-  paths-ignore:
-        - 'terraform/**'
-        - '.github/workflows/**'
 jobs:
   build:
 

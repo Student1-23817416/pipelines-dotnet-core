@@ -14,14 +14,14 @@ name: "CodeQL"
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+          - 'terraform/**'
+          - '.github/workflows/**'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
   schedule:
     - cron: '17 22 * * 5'
-  paths-ignore:
-        - 'terraform/**'
-        - '.github/workflows/**'
 
 jobs:
   analyze:
