@@ -19,6 +19,9 @@ on:
     branches: [ master ]
   schedule:
     - cron: '17 22 * * 5'
+  paths-ignore:
+        - 'terraform/**'
+        - '.github/workflows/**'
 
 jobs:
   analyze:
